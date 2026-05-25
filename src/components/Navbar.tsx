@@ -33,7 +33,7 @@ export default function Navbar() {
             <Droplets className="w-6 h-6 text-primary-foreground" />
           </div>
           <div className="leading-tight">
-            <span className="block font-display font-black text-xl text-heading tracking-tight">EcoFlow</span>
+            <span className="block font-display font-black text-xl text-white tracking-tight">EcoFlow</span>
             <span className="block font-display text-xs font-bold uppercase tracking-widest text-primary">Plumbing</span>
           </div>
         </a>
@@ -44,7 +44,7 @@ export default function Navbar() {
             <a
               key={l.label}
               href={l.href}
-              className="relative text-sm font-bold uppercase tracking-widest text-foreground/70 hover:text-primary transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-primary after:transition-all after:duration-300"
+              className="relative text-sm font-bold uppercase tracking-widest text-white/80 hover:text-white transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-primary after:transition-all after:duration-300"
             >
               {l.label}
             </a>
@@ -62,7 +62,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 text-foreground"
+          className="md:hidden p-2 text-white hover:text-primary transition-colors duration-200"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -77,14 +77,14 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden bg-background/98 backdrop-blur-md shadow-xl border-t border-border/30 px-6 py-6 flex flex-col gap-4"
+            className="md:hidden bg-background/98 backdrop-blur-md shadow-xl border-t border-white/10 px-6 py-6 flex flex-col gap-4"
           >
             {links.map((l) => (
               <a
                 key={l.label}
                 href={l.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-base font-bold uppercase tracking-widest text-foreground/80 hover:text-primary transition-colors"
+                className="text-base font-bold uppercase tracking-widest text-white/80 hover:text-white transition-colors"
               >
                 {l.label}
               </a>
